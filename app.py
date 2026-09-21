@@ -69,7 +69,7 @@ with col1:
 
     if uploaded:
         image = Image.open(uploaded)
-        st.image(image, caption="Uploaded X-Ray", use_column_width=True)
+        st.image(image, caption="Uploaded X-Ray", width="stretch")
 
 with col2:
     st.markdown("#### How it works")
