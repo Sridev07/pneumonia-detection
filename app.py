@@ -31,8 +31,10 @@ st.markdown("""
 # ── Load model ───────────────────────────────────────────────────────────────
 @st.cache_resource
 def load_model():
-    return tf.keras.models.load_model('best_model.h5')
-
+    return tf.keras.models.load_model(
+        'best_model.h5',
+        compile=False
+    )
 # ── MC Dropout inference ─────────────────────────────────────────────────────
 def mc_dropout_predict(model, img_array, num_runs=30):
     img_tensor = tf.constant(img_array, dtype=tf.float32)
