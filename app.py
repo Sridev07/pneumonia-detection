@@ -93,7 +93,9 @@ with col2:
 st.markdown("---")
 
 if uploaded:
-        if st.button("🔍 Analyse X-Ray", type="primary"):
+    
+    if st.button("🔍 Analyse X-Ray", type="primary"):
+        
         with st.spinner("Loading model..."):
             try:
                 model = load_model()
